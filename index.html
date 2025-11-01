@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/favicon.png" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/storymap-app/favicon.png" />
+
     <title>StoryMap App</title>
 
-    <!-- Link CSS -->
-    <link rel="stylesheet" href="/src/styles/styles.css" />
-
-    <!-- Script utama (Vite handle module imports) -->
-    <script type="module" src="./src/scripts/index.js"></script>
+    <!-- ❌ Hapus link langsung ke CSS di /src -->
+    <!-- Vite akan inject CSS otomatis dari import di JS -->
   </head>
   <body>
     <a href="#main-content" class="skip-link">Loncat ke Konten Utama</a>
@@ -42,7 +42,11 @@
           </ul>
         </nav>
 
-        <button id="drawer-button" class="drawer-button" aria-label="Buka Menu Navigasi">
+        <button
+          id="drawer-button"
+          class="drawer-button"
+          aria-label="Buka Menu Navigasi"
+        >
           ☰
         </button>
       </div>
@@ -55,5 +59,8 @@
         <p>&copy; 2024 StoryMap App. Dibuat untuk Dicoding Academy.</p>
       </div>
     </footer>
+
+    <!-- ✅ Script utama (Vite yang handle module & CSS import) -->
+    <script type="module" src="/src/scripts/index.js"></script>
   </body>
 </html>
