@@ -6,17 +6,24 @@
     <link rel="shortcut icon" href="/favicon.png" />
     <title>StoryMap App</title>
 
-    <link rel="stylesheet" href="/styles/styles.css" />
-    <script type="module" crossorigin src="/assets/index-BarHvqmf.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-AB-EujEX.css">
-  <link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
+    <!-- Tambahkan link CSS di sini -->
+
+    <!-- Script utama (akan dibundle oleh Vite saat build) -->
+    <script type="module" crossorigin src="/storymap-app/assets/index-BmXmgawQ.js"></script>
+    <link rel="stylesheet" crossorigin href="/storymap-app/assets/index-AB-EujEX.css">
+  <link rel="manifest" href="/storymap-app/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/storymap-app/registerSW.js"></script></head>
   <body>
     <a href="#main-content" class="skip-link">Loncat ke Konten Utama</a>
 
     <header>
       <div class="main-header container">
         <a class="brand-name" href="#/">StoryMap</a>
-        <nav id="navigation-drawer" class="navigation-drawer" role="navigation" aria-label="Menu Navigasi Utama">
+        <nav
+          id="navigation-drawer"
+          class="navigation-drawer"
+          role="navigation"
+          aria-label="Menu Navigasi Utama"
+        >
           <ul id="nav-list" class="nav-list" role="list">
             <li><a href="#/">Beranda</a></li>
             <li><a href="#/add">Tambah Cerita</a></li>
@@ -34,17 +41,18 @@
           </ul>
         </nav>
 
-        <button id="drawer-button" class="drawer-button" aria-label="Buka Menu Navigasi">☰</button>
+        <button id="drawer-button" class="drawer-button" aria-label="Buka Menu Navigasi">
+          ☰
+        </button>
       </div>
     </header>
 
-    <main id="main-app-content">
-      </main>
+    <main id="main-app-content"></main>
 
     <footer>
-        <div class="main-footer container">
-            <p>&copy; 2024 StoryMap App. Dibuat untuk Dicoding Academy.</p>
-        </div>
+      <div class="main-footer container">
+        <p>&copy; 2024 StoryMap App. Dibuat untuk Dicoding Academy.</p>
+      </div>
     </footer>
   </body>
 </html>
