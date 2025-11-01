@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.png" />
+    <title>StoryMap App</title>
+
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <script type="module" src="./src/scripts/index.js"></script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Loncat ke Konten Utama</a>
+
+    <header>
+      <div class="main-header container">
+        <a class="brand-name" href="#/">StoryMap</a>
+        <nav id="navigation-drawer" class="navigation-drawer" role="navigation" aria-label="Menu Navigasi Utama">
+          <ul id="nav-list" class="nav-list" role="list">
+            <li><a href="#/">Beranda</a></li>
+            <li><a href="#/add">Tambah Cerita</a></li>
+            <li><a href="#/about">About</a></li>
+
+            <li id="auth-links">
+              <a href="#/login">Login</a>
+              <span aria-hidden="true"> | </span>
+              <a href="#/register">Register</a>
+            </li>
+
+            <li id="logout-container" style="display: none;">
+              <button id="logout-button">Logout</button>
+            </li>
+          </ul>
+        </nav>
+
+        <button id="drawer-button" class="drawer-button" aria-label="Buka Menu Navigasi">☰</button>
+      </div>
+    </header>
+
+    <main id="main-app-content">
+      </main>
+
+    <footer>
+        <div class="main-footer container">
+            <p>&copy; 2024 StoryMap App. Dibuat untuk Dicoding Academy.</p>
+        </div>
+    </footer>
+  </body>
+</html>

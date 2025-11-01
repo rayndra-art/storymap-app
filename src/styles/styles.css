@@ -1,0 +1,338 @@
+/* src/styles/styles.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================================================= */
+/* FIX PENTING: STICKY FOOTER DENGAN FLEXBOX */
+/* Memastikan footer selalu di bawah viewport */
+/* ================================================= */
+html, body {
+    height: 100%; /* Mengisi seluruh tinggi viewport */
+    margin: 0;
+    display: flex; 
+    flex-direction: column; /* Menyusun elemen secara vertikal */
+}
+
+/* FIX PENTING: Menggunakan ID tag <main> yang baru */
+#main-app-content {
+    flex-grow: 1; /* KUNCI: Mendorong footer ke bawah dengan mengambil sisa ruang */
+    padding-top: 20px; 
+    padding-bottom: 20px;
+}
+
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  padding-inline: 32px;
+  margin-inline: auto;
+  max-width: 1300px;
+}
+
+/* ================================================= */
+/* HEADER STYLE & NAVIGASI (Fix Tata Letak) */
+/* ================================================= */
+header {
+  background-color: lightskyblue; 
+  view-transition-name: header-nav; /* Untuk transisi halaman */
+}
+
+.main-header {
+  min-height: 90px;
+  padding-block: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+/* TATA LETAK NAVIGASI DESKTOP */
+.navigation-drawer {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  padding: 5px 0;
+  display: block;
+}
+
+/* Tombol ☰ disembunyikan di desktop */
+.drawer-button {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.brand-name {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+  view-transition-name: app-title; /* Untuk transisi halaman */
+}
+
+/* ================================================= */
+/* FOOTER STYLE */
+/* ================================================= */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* ================================================= */
+/* FORM & UTILITY STYLE */
+/* ================================================= */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.input-toggle {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* Leaflet Map */
+#map-mini {
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+#map {
+    width: 100%;
+    min-height: 600px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+/* Tombol Utama */
+.primary-btn {
+  background-color: lightskyblue;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.primary-btn:hover {
+    background-color: #87cefa; /* Warna sedikit lebih terang saat hover */
+}
+
+/* ================================================= */
+/* CARD STORY ITEM (Saran Reviewer) */
+/* ================================================= */
+#storyList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.story-item {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    background-color: #fff;
+}
+
+.story-item:hover {
+    transform: translateY(-5px);
+}
+
+.story-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.story-item h3 {
+    padding: 10px 15px 0;
+    margin: 0;
+    font-size: 1.25em;
+    color: #333;
+}
+
+.story-item p {
+    padding: 0 15px;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.story-item .story-description {
+    padding-bottom: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Batasi deskripsi 3 baris */
+    -webkit-box-orient: vertical;
+}
+
+/* ================================================= */
+/* STATUS MESSAGE & LOADING */
+/* ================================================= */
+.status-message {
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.status-message.info {
+    background-color: #e6f7ff;
+    color: #0056b3;
+    border: 1px solid #91d5ff;
+}
+
+.status-message.success {
+    background-color: #f6ffed;
+    color: #389e0d;
+    border: 1px solid #b7eb8f;
+}
+
+.status-message.error {
+    background-color: #fff0f6;
+    color: #cf1322;
+    border: 1px solid #ffccc7;
+}
+
+/* ================================================= */
+/* SKIP LINK (AKSESIBILITAS) */
+/* ================================================= */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #333;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* ================================================= */
+/* AUTH FORM (LOGIN/REGISTER) */
+/* ================================================= */
+.auth-form {
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.auth-form p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.auth-form a {
+  color: lightskyblue;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-form .primary-btn {
+  width: 100%;
+}
+
+/* ================================================= */
+/* MEDIA QUERIES UNTUK RESPONSIVITAS */
+/* ================================================= */
+
+/* Tablet dan Mobile */
+@media screen and (max-width: 768px) {
+  .container {
+    padding-inline: 16px;
+  }
+
+  /* Navigasi Mobile */
+  .drawer-button {
+    display: block;
+  }
+
+  .navigation-drawer {
+    position: absolute;
+    /* Sesuaikan top agar pas di bawah header */
+    top: 90px; 
+    right: 0;
+    width: 60%;
+    max-width: 250px;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%); /* Sembunyikan drawer ke kanan */
+    transition: transform 0.3s ease-in-out;
+    z-index: 50;
+    padding: 10px 0;
+  }
+
+  .navigation-drawer.open {
+    transform: translateX(0); /* Tampilkan drawer */
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-inline: 16px;
+    gap: 10px;
+  }
+}
