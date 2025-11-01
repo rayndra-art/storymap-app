@@ -3,7 +3,7 @@
 // FIX KRITIS #1: Tambahkan ekstensi .js untuk mengatasi Rollup/Vite bare module import error
 import 'regenerator-runtime/runtime.js'; 
 
-import '../styles/styles.css';
+import './src/styles/styles.css';
 import App from './pages/app'; 
 
 // Import pendaftar Service Worker
