@@ -2,7 +2,7 @@
 
 // ✅ FIX 1 — Import runtime TANPA ekstensi ".js"
 // Vite sudah otomatis mencari ekstensi JS
-import 'regenerator-runtime/runtime';
+// import 'regenerator-runtime/runtime';
 
 // ✅ FIX 2 — Import CSS
 import '../styles/styles.css';
