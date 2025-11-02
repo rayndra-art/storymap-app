@@ -1,7 +1,4 @@
-// ✅ Tidak perlu import regenerator-runtime secara manual
-// Vite + Babel sudah handle async/await otomatis
-
-// Import CSS
+// Import CSS (✅ gunakan relative path)
 import '../styles/styles.css';
 
 // Import modul utama
