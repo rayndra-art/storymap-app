@@ -1,9 +1,14 @@
+// vite.config.js (KODE HARUS DIGANTI TOTAL)
+
 import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 import path from 'path';
 
-export default defineConfig({
-  base: '/storymap-app/', // ← WAJIB, sesuai nama repo GitHub
+// Buat konfigurasi bergantung pada mode (development atau production)
+export default defineConfig(({ mode }) => ({
+  // FIX KRITIS: BASE PATH KONDISIONAL
+  // Untuk Localhost (dev), gunakan root '/'. Untuk GitHub Pages (production), gunakan '/storymap-app/'
+  base: mode === 'production' ? '/storymap-app/' : '/', 
 
   plugins: [
     VitePWA({
@@ -33,4 +38,4 @@ export default defineConfig({
   build: {
     outDir: 'dist',
   },
-});
+}));
