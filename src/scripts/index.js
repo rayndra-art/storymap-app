@@ -2,7 +2,7 @@
 // Vite + Babel sudah handle async/await otomatis
 
 // Import CSS
-import '../styles/styles.css';
+import '/src/styles/styles.css';
 
 // Import modul utama
 import App from './pages/app.js';
